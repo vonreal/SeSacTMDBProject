@@ -9,25 +9,40 @@
 /* Begin PBXBuildFile section */
 		761C70362899F6D300652036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70352899F6D300652036 /* AppDelegate.swift */; };
 		761C70382899F6D300652036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70372899F6D300652036 /* SceneDelegate.swift */; };
-		761C703A2899F6D300652036 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70392899F6D300652036 /* ViewController.swift */; };
-		761C703D2899F6D300652036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761C703B2899F6D300652036 /* Main.storyboard */; };
+		761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70392899F6D300652036 /* TrendMovieListViewController.swift */; };
 		761C703F2899F6D400652036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761C703E2899F6D400652036 /* Assets.xcassets */; };
 		761C70422899F6D400652036 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761C70402899F6D400652036 /* LaunchScreen.storyboard */; };
 		761C704A2899F7C900652036 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 761C70492899F7C900652036 /* .gitignore */; };
 		761C704C2899F8B300652036 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C704B2899F8B300652036 /* APIKey.swift */; };
+		763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB53F289A76CD00C0B9CE /* Alamofire */; };
+		763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB542289A76D800C0B9CE /* SwiftyJSON */; };
+		76916D73289B9A1E00873B32 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D72289B9A1E00873B32 /* Movie.swift */; };
+		76916D75289BB43600873B32 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D74289BB43600873B32 /* Actor.swift */; };
+		76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76916D78289BC96200873B32 /* TrendMovieList.storyboard */; };
+		76916D7D289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */; };
+		76916D7E289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */; };
+		76916D81289BCCD900873B32 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D80289BCCD900873B32 /* ReusableViewProtocol.swift */; };
+		76916D84289BCDAF00873B32 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 76916D83289BCDAF00873B32 /* Kingfisher */; };
+		76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C58F289AF9A400604C79 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		761C70322899F6D300652036 /* SeSacTMDBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSacTMDBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		761C70352899F6D300652036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761C70372899F6D300652036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		761C70392899F6D300652036 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		761C703C2899F6D300652036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		761C70392899F6D300652036 /* TrendMovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendMovieListViewController.swift; sourceTree = "<group>"; };
 		761C703E2899F6D400652036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761C70412899F6D400652036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761C70432899F6D400652036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		761C70492899F7C900652036 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		761C704B2899F8B300652036 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		76916D72289B9A1E00873B32 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		76916D74289BB43600873B32 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		76916D78289BC96200873B32 /* TrendMovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendMovieList.storyboard; sourceTree = "<group>"; };
+		76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendMovieListCollectionViewCell.swift; sourceTree = "<group>"; };
+		76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendMovieListCollectionViewCell.xib; sourceTree = "<group>"; };
+		76916D80289BCCD900873B32 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		76C1C58F289AF9A400604C79 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76916D84289BCDAF00873B32 /* Kingfisher in Frameworks */,
+				763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */,
+				763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,16 +79,70 @@
 		761C70342899F6D300652036 /* SeSacTMDBProject */ = {
 			isa = PBXGroup;
 			children = (
+				761C70432899F6D400652036 /* Info.plist */,
 				761C70352899F6D300652036 /* AppDelegate.swift */,
 				761C70372899F6D300652036 /* SceneDelegate.swift */,
-				761C70392899F6D300652036 /* ViewController.swift */,
-				761C703B2899F6D300652036 /* Main.storyboard */,
 				761C703E2899F6D400652036 /* Assets.xcassets */,
+				761C70512899FAB000652036 /* Key */,
 				761C70402899F6D400652036 /* LaunchScreen.storyboard */,
-				761C70432899F6D400652036 /* Info.plist */,
-				761C704B2899F8B300652036 /* APIKey.swift */,
+				76916D71289B99EF00873B32 /* Models */,
+				76916D7F289BCCBB00873B32 /* Protocol */,
+				76916D77289BC92D00873B32 /* Storybard & XIB */,
+				76916D7A289BC9AF00873B32 /* View */,
+				76916D76289BC92200873B32 /* View Controllers */,
 			);
 			path = SeSacTMDBProject;
+			sourceTree = "<group>";
+		};
+		761C70512899FAB000652036 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				761C704B2899F8B300652036 /* APIKey.swift */,
+				76C1C58F289AF9A400604C79 /* EndPoint.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		76916D71289B99EF00873B32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76916D72289B9A1E00873B32 /* Movie.swift */,
+				76916D74289BB43600873B32 /* Actor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76916D76289BC92200873B32 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				761C70392899F6D300652036 /* TrendMovieListViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		76916D77289BC92D00873B32 /* Storybard & XIB */ = {
+			isa = PBXGroup;
+			children = (
+				76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */,
+				76916D78289BC96200873B32 /* TrendMovieList.storyboard */,
+			);
+			path = "Storybard & XIB";
+			sourceTree = "<group>";
+		};
+		76916D7A289BC9AF00873B32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76916D7F289BCCBB00873B32 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				76916D80289BCCD900873B32 /* ReusableViewProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +161,11 @@
 			dependencies = (
 			);
 			name = SeSacTMDBProject;
+			packageProductDependencies = (
+				763AB53F289A76CD00C0B9CE /* Alamofire */,
+				763AB542289A76D800C0B9CE /* SwiftyJSON */,
+				76916D83289BCDAF00873B32 /* Kingfisher */,
+			);
 			productName = SeSacTMDBProject;
 			productReference = 761C70322899F6D300652036 /* SeSacTMDBProject.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +194,11 @@
 				Base,
 			);
 			mainGroup = 761C70292899F6D300652036;
+			packageReferences = (
+				763AB53E289A76CD00C0B9CE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				763AB541289A76D800C0B9CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				76916D82289BCDAF00873B32 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 761C70332899F6D300652036 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,9 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				761C704A2899F7C900652036 /* .gitignore in Resources */,
+				76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */,
 				761C70422899F6D400652036 /* LaunchScreen.storyboard in Resources */,
+				76916D7E289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib in Resources */,
 				761C703F2899F6D400652036 /* Assets.xcassets in Resources */,
-				761C703D2899F6D300652036 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,24 +228,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				761C703A2899F6D300652036 /* ViewController.swift in Sources */,
+				76916D73289B9A1E00873B32 /* Movie.swift in Sources */,
+				76916D7D289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift in Sources */,
+				76916D81289BCCD900873B32 /* ReusableViewProtocol.swift in Sources */,
+				76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */,
+				761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */,
 				761C70362899F6D300652036 /* AppDelegate.swift in Sources */,
 				761C704C2899F8B300652036 /* APIKey.swift in Sources */,
 				761C70382899F6D300652036 /* SceneDelegate.swift in Sources */,
+				76916D75289BB43600873B32 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		761C703B2899F6D300652036 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				761C703C2899F6D300652036 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		761C70402899F6D400652036 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,7 +380,8 @@
 				INFOPLIST_FILE = SeSacTMDBProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TrendMovieList;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -329,7 +410,8 @@
 				INFOPLIST_FILE = SeSacTMDBProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TrendMovieList;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -368,6 +450,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		763AB53E289A76CD00C0B9CE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		763AB541289A76D800C0B9CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		76916D82289BCDAF00873B32 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		763AB53F289A76CD00C0B9CE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763AB53E289A76CD00C0B9CE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		763AB542289A76D800C0B9CE /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 763AB541289A76D800C0B9CE /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		76916D83289BCDAF00873B32 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76916D82289BCDAF00873B32 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 761C702A2899F6D300652036 /* Project object */;
 }
