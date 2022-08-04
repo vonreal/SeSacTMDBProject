@@ -23,6 +23,9 @@
 		76916D7E289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */; };
 		76916D81289BCCD900873B32 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D80289BCCD900873B32 /* ReusableViewProtocol.swift */; };
 		76916D84289BCDAF00873B32 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 76916D83289BCDAF00873B32 /* Kingfisher */; };
+		76916D86289C326200873B32 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D85289C326200873B32 /* MovieDetailViewController.swift */; };
+		76916D89289C398C00873B32 /* CastListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D87289C398C00873B32 /* CastListTableViewCell.swift */; };
+		76916D8A289C398C00873B32 /* CastListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76916D88289C398C00873B32 /* CastListTableViewCell.xib */; };
 		76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C58F289AF9A400604C79 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendMovieListCollectionViewCell.swift; sourceTree = "<group>"; };
 		76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendMovieListCollectionViewCell.xib; sourceTree = "<group>"; };
 		76916D80289BCCD900873B32 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		76916D85289C326200873B32 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		76916D87289C398C00873B32 /* CastListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastListTableViewCell.swift; sourceTree = "<group>"; };
+		76916D88289C398C00873B32 /* CastListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastListTableViewCell.xib; sourceTree = "<group>"; };
 		76C1C58F289AF9A400604C79 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				761C70392899F6D300652036 /* TrendMovieListViewController.swift */,
+				76916D85289C326200873B32 /* MovieDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 			children = (
 				76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */,
 				76916D78289BC96200873B32 /* TrendMovieList.storyboard */,
+				76916D88289C398C00873B32 /* CastListTableViewCell.xib */,
 			);
 			path = "Storybard & XIB";
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 		76916D7A289BC9AF00873B32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76916D87289C398C00873B32 /* CastListTableViewCell.swift */,
 				76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */,
 			);
 			path = View;
@@ -217,6 +226,7 @@
 				76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */,
 				761C70422899F6D400652036 /* LaunchScreen.storyboard in Resources */,
 				76916D7E289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib in Resources */,
+				76916D8A289C398C00873B32 /* CastListTableViewCell.xib in Resources */,
 				761C703F2899F6D400652036 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +243,9 @@
 				76916D81289BCCD900873B32 /* ReusableViewProtocol.swift in Sources */,
 				76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */,
 				761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */,
+				76916D89289C398C00873B32 /* CastListTableViewCell.swift in Sources */,
 				761C70362899F6D300652036 /* AppDelegate.swift in Sources */,
+				76916D86289C326200873B32 /* MovieDetailViewController.swift in Sources */,
 				761C704C2899F8B300652036 /* APIKey.swift in Sources */,
 				761C70382899F6D300652036 /* SceneDelegate.swift in Sources */,
 				76916D75289BB43600873B32 /* Actor.swift in Sources */,

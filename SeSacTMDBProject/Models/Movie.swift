@@ -13,8 +13,6 @@ import SwiftyJSON
 struct Movie {
     static var genreList: [Int: String] = [:]
     
-    
-    
     init() {
         self.title = ""
         self.releaseDate = ""

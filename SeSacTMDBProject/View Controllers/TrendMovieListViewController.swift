@@ -26,8 +26,17 @@ class TrendMovieListViewController: UIViewController {
         collectionViewSetDelegate()
         registerNib()
         designCollectionView()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(listButtonClicked))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
+        
+        navigationController?.navigationBar.scrollEdgeAppearance = UINavigationBarAppearance()
 
     }
+    
+    @objc func listButtonClicked() { }
+    @objc func searchButtonClicked() { }
     
     func collectionViewSetDelegate() {
         trendListCollectionView.delegate = self
@@ -195,7 +204,17 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         trendListCollectionView.collectionViewLayout = layout
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "TrendMovieList", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: MovieDetailViewController.reuseIdenfier) as? MovieDetailViewController else { return }
+        
+        vc.movie = weekTrendMovieList[indexPath.item]
+        if let credit = credits[indexPath.item] {
+            vc.credit = credit
+        }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension TrendMovieListViewController: UICollectionViewDataSourcePrefetching {
