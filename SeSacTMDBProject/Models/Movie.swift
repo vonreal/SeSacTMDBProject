@@ -19,6 +19,7 @@ struct Movie {
         self.title = ""
         self.releaseDate = ""
         self.posterPath = ""
+        self.backdropPath = ""
         self.voteAverage = 0.0
         self.overView = ""
         self.genreID = []
@@ -27,6 +28,7 @@ struct Movie {
     
     var title: String
     var releaseDate: String
+    var backdropPath: String
     var posterPath: String
     var voteAverage: Double
     var overView: String
@@ -51,6 +53,14 @@ struct Movie {
     
     var originalPosterURL: URL? {
         return URL(string: EndPoint.tmdbOrignalPosterURL + posterPath)
+    }
+    
+    var width500BackDropURL: URL? {
+        return URL(string: EndPoint.tmdbWidth500PosterURL + backdropPath)
+    }
+    
+    var originalBackDropURL: URL? {
+        return URL(string: EndPoint.tmdbOrignalPosterURL + backdropPath)
     }
     
     static func setGenreList() {

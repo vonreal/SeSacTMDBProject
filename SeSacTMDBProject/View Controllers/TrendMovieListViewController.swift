@@ -57,6 +57,7 @@ class TrendMovieListViewController: UIViewController {
                         self.setCredits(movieInfo: movie, index: index)
                         movie.overView = json["overview"].stringValue
                         movie.posterPath = json["poster_path"].stringValue
+                        movie.backdropPath = json["backdrop_path"].stringValue
                         movie.genreID = json["genre_ids"].arrayValue.map { $0.intValue }
                         movie.voteAverage = json["vote_average"].doubleValue
                         movie.releaseDate = json["release_date"].stringValue
@@ -118,13 +119,14 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         cell.releaseDateLabel.textColor = .lightGray
         
         if !credits.isEmpty {
-            let actors = credits[indexPath.item]!
-            var castes = actors[0].name
-            
-            for actor in 1..<actors.count {
-                castes += ", \(actors[actor].name)"
+            if let actors = credits[indexPath.item] {
+                var castes = actors[0].name
+                
+                for actor in 1..<actors.count {
+                    castes += ", \(actors[actor].name)"
+                }
+                cell.castsLabel.text = castes
             }
-            cell.castsLabel.text = castes
         }
         
         if !weekTrendMovie.genres.isEmpty {
@@ -133,7 +135,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         
         cell.genreLabel.font = .boldSystemFont(ofSize: 18)
         
-        cell.posterImageView.kf.setImage(with: weekTrendMovie.width500PosterURL!)
+        cell.posterImageView.kf.setImage(with: weekTrendMovie.width500BackDropURL!)
         cell.posterImageView.contentMode = .scaleAspectFill
         cell.posterImageView.layer.cornerRadius = 10
         cell.posterImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -198,5 +200,10 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
 
 extension TrendMovieListViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if indexPath.item == weekTrendMovieList.count - 1 {
+                requestTrendMovieListFromTMDB()
+            }
+        }
     }
 }
