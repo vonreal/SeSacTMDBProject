@@ -4,4 +4,9 @@
 
 # 구현 결과
 ## 0805 기준
-![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/50474006/182983564-0584a8ba-c57b-45ea-a205-525b11300b02.gif)
+<table>
+       <tr>
+            <td>![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/50474006/182983640-b5808d8d-d5e7-4297-b504-bb314d9d8249.gif)</td>
+            <td>![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/50474006/182983564-0584a8ba-c57b-45ea-a205-525b11300b02.gif)</td>
+       </tr>
+</table>
