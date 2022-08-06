@@ -42,7 +42,7 @@ struct Movie {
             }
         }
         return genres
-//        return self.genreID.map { Movie.genreList[$0] ?? "" } map을 쓰면 이렇게 줄일 수 있다.
+//        return self.genreID.map { Movie.genreList[$0] ?? "" }// map을 쓰면 이렇게 줄일 수 있다.
     }
     
     var width500PosterURL: URL? {

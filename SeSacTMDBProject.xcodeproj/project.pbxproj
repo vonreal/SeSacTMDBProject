@@ -17,6 +17,7 @@
 		761C704C2899F8B300652036 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C704B2899F8B300652036 /* APIKey.swift */; };
 		763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB53F289A76CD00C0B9CE /* Alamofire */; };
 		763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB542289A76D800C0B9CE /* SwiftyJSON */; };
+		7658CC00289EAAA7003FC07D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658CBFF289EAAA7003FC07D /* Crew.swift */; };
 		76916D73289B9A1E00873B32 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D72289B9A1E00873B32 /* Movie.swift */; };
 		76916D75289BB43600873B32 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D74289BB43600873B32 /* Actor.swift */; };
 		76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76916D78289BC96200873B32 /* TrendMovieList.storyboard */; };
@@ -41,6 +42,7 @@
 		761C70432899F6D400652036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		761C70492899F7C900652036 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		761C704B2899F8B300652036 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		7658CBFF289EAAA7003FC07D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		76916D72289B9A1E00873B32 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		76916D74289BB43600873B32 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		76916D78289BC96200873B32 /* TrendMovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendMovieList.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				76916D72289B9A1E00873B32 /* Movie.swift */,
 				76916D74289BB43600873B32 /* Actor.swift */,
+				7658CBFF289EAAA7003FC07D /* Crew.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76916D73289B9A1E00873B32 /* Movie.swift in Sources */,
+				7658CC00289EAAA7003FC07D /* Crew.swift in Sources */,
 				76916D7D289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift in Sources */,
 				76916D81289BCCD900873B32 /* ReusableViewProtocol.swift in Sources */,
 				76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */,

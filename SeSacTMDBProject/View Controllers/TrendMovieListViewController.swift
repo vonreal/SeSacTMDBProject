@@ -15,7 +15,7 @@ class TrendMovieListViewController: UIViewController {
     
     @IBOutlet weak var trendListCollectionView: UICollectionView!
     var weekTrendMovieList: [Movie] = []
-    var credits: [Int: [Actor]] = [:]
+    var credits: [Int: ([Actor], [Crew])] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +63,8 @@ class TrendMovieListViewController: UIViewController {
                         var movie = Movie()
                         movie.title = json["title"].stringValue
                         movie.movieID = json["id"].intValue
-                        TrendMovieListAPIManager.shared.requestCredits(movieInfo: movie, index: index) { actors, index in
-                            self.credits[index] = actors
+                        TrendMovieListAPIManager.shared.requestCredits(movieInfo: movie, index: index) { actors, crews, index in
+                            self.credits[index] = (actors, crews)
                             DispatchQueue.main.sync {
                                 self.trendListCollectionView.reloadData()
                             }
@@ -107,7 +107,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         
         
         if !credits.isEmpty {
-            if let actors = credits[indexPath.item] {
+            if let actors = credits[indexPath.item]?.0 {
                 var castes = actors[0].name
                 
                 for actor in 1..<actors.count {

@@ -17,7 +17,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var castListTableView: UITableView!
     
     var movie = Movie()
-    var credit: [Actor] = []
+    var credit: ([Actor], [Crew]) = ([], [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,33 +58,60 @@ class MovieDetailViewController: UIViewController {
 }
 
 extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return credit.count
+        if section == 0 {
+            return credit.0.count
+        } else {
+            return credit.1.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CastListTableViewCell.reuseIdenfier) as? CastListTableViewCell else { return UITableViewCell() }
         
-        if credit[indexPath.row].profilePath.isEmpty {
-            cell.profileImageView.kf.setImage(with: URL(string: "https://us.123rf.com/450wm/nexusby/nexusby1805/nexusby180500076/100911331-%EA%B8%B0%EB%B3%B8-%EC%95%84%EB%B0%94%ED%83%80-%EC%82%AC%EC%A7%84-%EC%9E%90%EB%A6%AC-%ED%91%9C%EC%8B%9C-%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%EC%82%AC%EC%A7%84.jpg?ver=6"))
+        if indexPath.section == 0 {
+            let castList = credit.0
+            
+            cell.profileImageView.kf.setImage(with: castList[indexPath.row].width500ProfileURL)
+            cell.profileImageView.layer.cornerRadius = 10
+            cell.profileImageView.contentMode = .scaleAspectFill
+            
+            cell.nameLabel.text = castList[indexPath.row].name
+            cell.nameLabel.font = .systemFont(ofSize: 14)
+            
+            cell.chracterNameLabel.text = castList[indexPath.row].getChracterName(movie: movie.title)
+            cell.chracterNameLabel.font = .systemFont(ofSize: 12)
+            cell.chracterNameLabel.textColor = .lightGray
+            
+            return cell
         } else {
-            cell.profileImageView.kf.setImage(with: credit[indexPath.row].width500ProfileURL)
+            let crewList = credit.1
+            
+            cell.profileImageView.kf.setImage(with: crewList[indexPath.row].width500ProfileURL)
+            cell.profileImageView.layer.cornerRadius = 10
+            cell.profileImageView.contentMode = .scaleAspectFill
+            
+            cell.nameLabel.text = crewList[indexPath.row].name
+            cell.nameLabel.font = .systemFont(ofSize: 14)
+            
+            cell.chracterNameLabel.text = crewList[indexPath.row].department
+            cell.chracterNameLabel.font = .systemFont(ofSize: 12)
+            cell.chracterNameLabel.textColor = .lightGray
+            
+            return cell
         }
-        cell.profileImageView.layer.cornerRadius = 10
-        cell.profileImageView.contentMode = .scaleAspectFill
-        
-        cell.nameLabel.text = credit[indexPath.row].name
-        cell.nameLabel.font = .systemFont(ofSize: 14)
-        
-        cell.chracterNameLabel.text = credit[indexPath.row].getChracterName(movie: movie.title)
-        cell.chracterNameLabel.font = .systemFont(ofSize: 12)
-        cell.chracterNameLabel.textColor = .lightGray
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Cast"
+        if section == 0 {
+            return "Cast"
+        } else {
+            return "Crew"
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

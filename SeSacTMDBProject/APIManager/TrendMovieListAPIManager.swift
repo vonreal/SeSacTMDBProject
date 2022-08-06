@@ -44,11 +44,13 @@ class TrendMovieListAPIManager {
             }
     }
     
-    typealias setCredits = ([Actor], Int) -> ()
+    typealias setCredits = ([Actor], [Crew], Int) -> ()
     
     func requestCredits(movieInfo: Movie, index: Int, setCredits: @escaping setCredits) {
-        let url = EndPoint.tmdbCreditsURL + String(movieInfo.movieID) + "/credits?api_key=" + APIKey.tmdbKey
         var actors: [Actor] = []
+        var crews: [Crew] = []
+        let url = EndPoint.tmdbCreditsURL + String(movieInfo.movieID) + "/credits?api_key=" + APIKey.tmdbKey
+        
         AF.request(url, method: .get)
             .validate()
             .responseData(queue: .global()) { response in
@@ -61,12 +63,24 @@ class TrendMovieListAPIManager {
                         actor.name = cast["name"].stringValue
                         actor.profilePath = cast["profile_path"].stringValue
                         actor.setChracterName(movie: movieInfo.title, name: cast["character"].stringValue)
-                        actor.actorId = cast["id"].intValue
+                        actor.actorID = cast["id"].intValue
 
                         actors.append(actor)
                     }
                     
-                    setCredits(actors, index)
+                    let crewList = JSON(value)["crew"].arrayValue
+                    
+                    for crew in crewList {
+                        var person = Crew()
+                        person.name = crew["name"].stringValue
+                        person.profilePath = crew["profile_path"].stringValue
+                        person.department = crew["department"].stringValue
+                        person.crewID = crew["id"].intValue
+                        
+                        crews.append(person)
+                    }
+                    
+                    setCredits(actors, crews, index)
                     break
 
                 case .failure(let error):
