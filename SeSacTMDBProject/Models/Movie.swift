@@ -35,14 +35,14 @@ struct Movie {
     
     var genres: [String] {
         var genres: [String] = []
-        
+
         for genre in self.genreID {
             if let genreName = Movie.genreList[genre] {
                 genres.append(genreName)
             }
         }
-        
         return genres
+//        return self.genreID.map { Movie.genreList[$0] ?? "" } map을 쓰면 이렇게 줄일 수 있다.
     }
     
     var width500PosterURL: URL? {
@@ -62,29 +62,8 @@ struct Movie {
     }
     
     static func setGenreList() {
-        let url = EndPoint.tmdbGenreURL + APIKey.tmdbKey
-        
-        AF.request(url, method: .get)
-            .validate()
-            .responseData { response in
-                switch response.result {
-                case .success(let value):
-                    let genresList = JSON(value)["genres"].arrayValue
-                    
-                    for genre in genresList {
-                        let id = genre["id"].intValue
-                        let name = genre["name"].stringValue
-                        
-                        self.genreList[id] = name
-                    }
-                    break
-                    
-                case .failure(let error):
-                    print(error)
-                    break
-                }
-            }
+        TrendMovieListAPIManager.shared.requestGenreList { id, name in
+            self.genreList[id] = name
+        }
     }
-    
-    
 }

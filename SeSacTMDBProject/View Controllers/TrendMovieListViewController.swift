@@ -53,7 +53,7 @@ class TrendMovieListViewController: UIViewController {
         
         AF.request(url, method: .get)
             .validate()
-            .responseData { response in
+            .responseData(queue: .global()) { response in
                 switch response.result {
                 case .success(let value):
                     let jsonArray = JSON(value)["results"].arrayValue
@@ -63,7 +63,12 @@ class TrendMovieListViewController: UIViewController {
                         var movie = Movie()
                         movie.title = json["title"].stringValue
                         movie.movieID = json["id"].intValue
-                        self.setCredits(movieInfo: movie, index: index)
+                        TrendMovieListAPIManager.shared.requestCredits(movieInfo: movie, index: index) { actors, index in
+                            self.credits[index] = actors
+                            DispatchQueue.main.sync {
+                                self.trendListCollectionView.reloadData()
+                            }
+                        }
                         movie.overView = json["overview"].stringValue
                         movie.posterPath = json["poster_path"].stringValue
                         movie.backdropPath = json["backdrop_path"].stringValue
@@ -73,7 +78,9 @@ class TrendMovieListViewController: UIViewController {
                         self.weekTrendMovieList.append(movie)
                         index += 1
                     }
-                    self.trendListCollectionView.reloadData()
+                    DispatchQueue.main.sync {
+                        self.trendListCollectionView.reloadData()
+                    }
                     break
 
                 case .failure(let error):
@@ -82,35 +89,6 @@ class TrendMovieListViewController: UIViewController {
                 }
             }
     }
-    func setCredits(movieInfo: Movie, index: Int) {
-        let url = EndPoint.tmdbCreditsURL + String(movieInfo.movieID) + "/credits?api_key=" + APIKey.tmdbKey
-        var actors: [Actor] = []
-        AF.request(url, method: .get)
-            .validate()
-            .responseData { response in
-                switch response.result {
-                case .success(let value):
-                    let castList = JSON(value)["cast"].arrayValue
-                    
-                    for cast in castList {
-                        var actor = Actor()
-                        actor.name = cast["name"].stringValue
-                        actor.profilePath = cast["profile_path"].stringValue
-                        actor.setChracterName(movie: movieInfo.title, name: cast["character"].stringValue)
-                        actor.actorId = cast["id"].intValue
-
-                        actors.append(actor)
-                    }
-                    self.credits[index] = actors
-                    self.trendListCollectionView.reloadData()
-                    break
-
-                case .failure(let error):
-                    print(error)
-                    break
-                }
-            }
-        }
 }
 
 extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -127,6 +105,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         cell.releaseDateLabel.font = .systemFont(ofSize: 12)
         cell.releaseDateLabel.textColor = .lightGray
         
+        
         if !credits.isEmpty {
             if let actors = credits[indexPath.item] {
                 var castes = actors[0].name
@@ -139,7 +118,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         }
         
         if !weekTrendMovie.genres.isEmpty {
-            cell.genreLabel.text = "#\(weekTrendMovie.genres[0])"
+            cell.genreLabel.text = "#\(weekTrendMovie.genres.randomElement()!)"
         }
         
         cell.genreLabel.font = .boldSystemFont(ofSize: 18)

@@ -30,7 +30,7 @@ class MovieDetailViewController: UIViewController {
     func designUI() {
         let tintView = UIView()
         tintView.backgroundColor = UIColor(white: 0, alpha: 0.3)
-        tintView.frame = CGRect(x: 0, y: 0, width: backdropImageView.frame.width, height: backdropImageView.frame.height)
+        tintView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: backdropImageView.frame.height)
 
         backdropImageView.addSubview(tintView)
         backdropImageView.contentMode = .scaleAspectFill
@@ -65,7 +65,11 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CastListTableViewCell.reuseIdenfier) as? CastListTableViewCell else { return UITableViewCell() }
         
-        cell.profileImageView.kf.setImage(with: credit[indexPath.row].width500ProfileURL)
+        if credit[indexPath.row].profilePath.isEmpty {
+            cell.profileImageView.kf.setImage(with: URL(string: "https://us.123rf.com/450wm/nexusby/nexusby1805/nexusby180500076/100911331-%EA%B8%B0%EB%B3%B8-%EC%95%84%EB%B0%94%ED%83%80-%EC%82%AC%EC%A7%84-%EC%9E%90%EB%A6%AC-%ED%91%9C%EC%8B%9C-%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%EC%82%AC%EC%A7%84.jpg?ver=6"))
+        } else {
+            cell.profileImageView.kf.setImage(with: credit[indexPath.row].width500ProfileURL)
+        }
         cell.profileImageView.layer.cornerRadius = 10
         cell.profileImageView.contentMode = .scaleAspectFill
         
@@ -81,5 +85,9 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Cast"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

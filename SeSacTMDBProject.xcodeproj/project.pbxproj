@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760D94A2289CBA4F0010F710 /* TrendMovieListAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760D94A1289CBA4F0010F710 /* TrendMovieListAPIManager.swift */; };
 		761C70362899F6D300652036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70352899F6D300652036 /* AppDelegate.swift */; };
 		761C70382899F6D300652036 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70372899F6D300652036 /* SceneDelegate.swift */; };
 		761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C70392899F6D300652036 /* TrendMovieListViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760D94A1289CBA4F0010F710 /* TrendMovieListAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendMovieListAPIManager.swift; sourceTree = "<group>"; };
 		761C70322899F6D300652036 /* SeSacTMDBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSacTMDBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		761C70352899F6D300652036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		761C70372899F6D300652036 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760D94A0289CBA110010F710 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				760D94A1289CBA4F0010F710 /* TrendMovieListAPIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		761C70292899F6D300652036 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 				761C70352899F6D300652036 /* AppDelegate.swift */,
 				761C70372899F6D300652036 /* SceneDelegate.swift */,
 				761C703E2899F6D400652036 /* Assets.xcassets */,
+				760D94A0289CBA110010F710 /* APIManager */,
 				761C70512899FAB000652036 /* Key */,
 				761C70402899F6D400652036 /* LaunchScreen.storyboard */,
 				76916D71289B99EF00873B32 /* Models */,
@@ -245,6 +256,7 @@
 				761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */,
 				76916D89289C398C00873B32 /* CastListTableViewCell.swift in Sources */,
 				761C70362899F6D300652036 /* AppDelegate.swift in Sources */,
+				760D94A2289CBA4F0010F710 /* TrendMovieListAPIManager.swift in Sources */,
 				76916D86289C326200873B32 /* MovieDetailViewController.swift in Sources */,
 				761C704C2899F8B300652036 /* APIKey.swift in Sources */,
 				761C70382899F6D300652036 /* SceneDelegate.swift in Sources */,
