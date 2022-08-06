@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TrendMovieListCellDelegate: AnyObject {
+    func linkButtonClicked(buttonTag: Int)
+}
+
 class TrendMovieListCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var releaseDateLabel: UILabel!
@@ -22,4 +26,10 @@ class TrendMovieListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var trendMovieVIew: UIView!
+    
+    weak var delegate: TrendMovieListCellDelegate?
+    
+    @IBAction func linkButtonClicked(_ sender: UIButton) {
+        self.delegate?.linkButtonClicked(buttonTag: sender.tag)
+    }
 }

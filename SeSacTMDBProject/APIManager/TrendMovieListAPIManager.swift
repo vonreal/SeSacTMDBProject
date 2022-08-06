@@ -49,7 +49,7 @@ class TrendMovieListAPIManager {
     func requestCredits(movieInfo: Movie, index: Int, setCredits: @escaping setCredits) {
         var actors: [Actor] = []
         var crews: [Crew] = []
-        let url = EndPoint.tmdbCreditsURL + String(movieInfo.movieID) + "/credits?api_key=" + APIKey.tmdbKey
+        let url = EndPoint.tmdbMovieURL + String(movieInfo.movieID) + "/credits?api_key=" + APIKey.tmdbKey
         
         AF.request(url, method: .get)
             .validate()
@@ -81,6 +81,31 @@ class TrendMovieListAPIManager {
                     }
                     
                     setCredits(actors, crews, index)
+                    break
+
+                case .failure(let error):
+                    print(error)
+                    break
+                }
+            }
+    }
+    
+    typealias setYoutubeLink = (String) -> ()
+    
+    func requestPreviewVideo(movieID: Int, setYoutubeLink: @escaping setYoutubeLink) {
+        let url = EndPoint.tmdbMovieURL +  String(movieID) + "/videos?api_key=" + APIKey.tmdbKey
+        
+        AF.request(url, method: .get)
+            .validate()
+            .responseData(queue: .global()) { response in
+                switch response.result {
+                case .success(let value):
+                    let keyList = JSON(value)["results"].arrayValue
+                                                        .filter { $0["iso_639_1"].stringValue == "en" }
+                                                        .filter { !$0["key"].stringValue.isEmpty }
+                                                        .map {$0["key"].stringValue}
+                    
+                    setYoutubeLink(keyList[0])
                     break
 
                 case .failure(let error):

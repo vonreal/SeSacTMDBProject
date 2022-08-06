@@ -20,6 +20,7 @@
                         <rect key="frame" x="150.5" y="142" width="19" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="Kaf-5f-LS7"/>
+                            <constraint firstAttribute="width" secondItem="PfO-LW-mZR" secondAttribute="height" multiplier="19:22" id="iGh-tE-zHY"/>
                         </constraints>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

@@ -23,17 +23,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7OC-4k-YFO">
-                                        <rect key="frame" x="42" y="671.5" width="205.5" height="91"/>
+                                        <rect key="frame" x="37.5" y="700.5" width="173" height="77"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="트렌드를 잊은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChO-o4-Lla">
-                                                <rect key="frame" x="0.0" y="0.0" width="205.5" height="45.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리에게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRe-dF-uCC">
-                                                <rect key="frame" x="0.0" y="45.5" width="205.5" height="45.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                                <rect key="frame" x="0.0" y="38.5" width="173" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -42,8 +42,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.29803911423841062" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="7OC-4k-YFO" firstAttribute="centerY" secondItem="Mzc-nB-9fQ" secondAttribute="centerY" multiplier="1.6" id="373-wY-hle"/>
-                                    <constraint firstItem="7OC-4k-YFO" firstAttribute="centerX" secondItem="Mzc-nB-9fQ" secondAttribute="centerX" multiplier="0.7" id="C7O-A5-fMz"/>
+                                    <constraint firstItem="7OC-4k-YFO" firstAttribute="centerY" secondItem="Mzc-nB-9fQ" secondAttribute="centerY" multiplier="1.65" id="373-wY-hle"/>
+                                    <constraint firstItem="7OC-4k-YFO" firstAttribute="centerX" secondItem="Mzc-nB-9fQ" secondAttribute="centerX" multiplier="0.6" id="C7O-A5-fMz"/>
                                 </constraints>
                             </view>
                         </subviews>

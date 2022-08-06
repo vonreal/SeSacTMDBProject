@@ -10,12 +10,14 @@ import UIKit
 import Alamofire
 import Kingfisher
 import SwiftyJSON
+import CoreAudio
 
 class TrendMovieListViewController: UIViewController {
     
     @IBOutlet weak var trendListCollectionView: UICollectionView!
     var weekTrendMovieList: [Movie] = []
     var credits: [Int: ([Actor], [Crew])] = [:]
+    var button =  UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,12 +110,14 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         
         if !credits.isEmpty {
             if let actors = credits[indexPath.item]?.0 {
+                if !actors.isEmpty {
                 var castes = actors[0].name
                 
                 for actor in 1..<actors.count {
                     castes += ", \(actors[actor].name)"
                 }
                 cell.castsLabel.text = castes
+                }
             }
         }
         
@@ -156,7 +160,9 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         cell.moreButton.setTitle("", for: .normal)
         cell.moreButton.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
         
+        cell.delegate = self
         cell.linkButton.layer.cornerRadius = 10
+        cell.linkButton.tag = indexPath.item
         
         cell.trendMovieVIew.layer.borderWidth = 0.1
         cell.trendMovieVIew.layer.borderColor = UIColor.lightGray.cgColor
@@ -203,5 +209,16 @@ extension TrendMovieListViewController: UICollectionViewDataSourcePrefetching {
                 requestTrendMovieListFromTMDB()
             }
         }
+    }
+}
+
+extension TrendMovieListViewController: TrendMovieListCellDelegate {
+    @objc func linkButtonClicked(buttonTag: Int) {
+        let sb = UIStoryboard(name: "TrendMovieList", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: PreviewVideoViewController.reuseIdenfier) as? PreviewVideoViewController else { return }
+
+        vc.movie = weekTrendMovieList[buttonTag]
+        
+        self.present(vc, animated: true)
     }
 }
