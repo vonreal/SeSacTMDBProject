@@ -18,6 +18,8 @@
 		763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB53F289A76CD00C0B9CE /* Alamofire */; };
 		763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB542289A76D800C0B9CE /* SwiftyJSON */; };
 		7658CC00289EAAA7003FC07D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658CBFF289EAAA7003FC07D /* Crew.swift */; };
+		7658CC05289EB33B003FC07D /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658CC03289EB33B003FC07D /* OverViewTableViewCell.swift */; };
+		7658CC06289EB33B003FC07D /* OverViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */; };
 		76916D73289B9A1E00873B32 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D72289B9A1E00873B32 /* Movie.swift */; };
 		76916D75289BB43600873B32 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76916D74289BB43600873B32 /* Actor.swift */; };
 		76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76916D78289BC96200873B32 /* TrendMovieList.storyboard */; };
@@ -43,6 +45,8 @@
 		761C70492899F7C900652036 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		761C704B2899F8B300652036 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		7658CBFF289EAAA7003FC07D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		7658CC03289EB33B003FC07D /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
+		7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverViewTableViewCell.xib; sourceTree = "<group>"; };
 		76916D72289B9A1E00873B32 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		76916D74289BB43600873B32 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		76916D78289BC96200873B32 /* TrendMovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendMovieList.storyboard; sourceTree = "<group>"; };
@@ -125,9 +129,9 @@
 		76916D71289B99EF00873B32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				76916D72289B9A1E00873B32 /* Movie.swift */,
 				76916D74289BB43600873B32 /* Actor.swift */,
 				7658CBFF289EAAA7003FC07D /* Crew.swift */,
+				76916D72289B9A1E00873B32 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,8 +139,8 @@
 		76916D76289BC92200873B32 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				761C70392899F6D300652036 /* TrendMovieListViewController.swift */,
 				76916D85289C326200873B32 /* MovieDetailViewController.swift */,
+				761C70392899F6D300652036 /* TrendMovieListViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -144,9 +148,10 @@
 		76916D77289BC92D00873B32 /* Storybard & XIB */ = {
 			isa = PBXGroup;
 			children = (
-				76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */,
-				76916D78289BC96200873B32 /* TrendMovieList.storyboard */,
 				76916D88289C398C00873B32 /* CastListTableViewCell.xib */,
+				7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */,
+				76916D78289BC96200873B32 /* TrendMovieList.storyboard */,
+				76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */,
 			);
 			path = "Storybard & XIB";
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				76916D87289C398C00873B32 /* CastListTableViewCell.swift */,
+				7658CC03289EB33B003FC07D /* OverViewTableViewCell.swift */,
 				76916D7B289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift */,
 			);
 			path = View;
@@ -236,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7658CC06289EB33B003FC07D /* OverViewTableViewCell.xib in Resources */,
 				761C704A2899F7C900652036 /* .gitignore in Resources */,
 				76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */,
 				761C70422899F6D400652036 /* LaunchScreen.storyboard in Resources */,
@@ -252,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7658CC05289EB33B003FC07D /* OverViewTableViewCell.swift in Sources */,
 				76916D73289B9A1E00873B32 /* Movie.swift in Sources */,
 				7658CC00289EAAA7003FC07D /* Crew.swift in Sources */,
 				76916D7D289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift in Sources */,

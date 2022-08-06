@@ -80,18 +80,18 @@
                         <viewLayoutGuide key="safeArea" id="b7O-sI-tQw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="leading" secondItem="b7O-sI-tQw" secondAttribute="leading" id="2H7-4e-tJ4"/>
                             <constraint firstItem="b7O-sI-tQw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G9K-PE-NNU" secondAttribute="trailing" constant="20" id="2qI-ZH-6kc"/>
                             <constraint firstItem="R8g-B1-zoH" firstAttribute="leading" secondItem="b7O-sI-tQw" secondAttribute="leading" id="60b-4g-VX1"/>
+                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="top" secondItem="R8g-B1-zoH" secondAttribute="bottom" id="EsC-Oh-gb8"/>
+                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="trailing" secondItem="b7O-sI-tQw" secondAttribute="trailing" id="JWS-QH-Z3n"/>
                             <constraint firstItem="lzK-q8-F2C" firstAttribute="leading" secondItem="G9K-PE-NNU" secondAttribute="leading" multiplier="1.4" id="K2v-xk-hvQ"/>
-                            <constraint firstItem="b7O-sI-tQw" firstAttribute="bottom" secondItem="Qc6-Ul-HHh" secondAttribute="bottom" id="MxZ-XK-orB"/>
+                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="bottom" secondItem="b7O-sI-tQw" secondAttribute="bottom" id="Lo8-tn-Oyy"/>
                             <constraint firstItem="R8g-B1-zoH" firstAttribute="top" secondItem="b7O-sI-tQw" secondAttribute="top" id="SXh-lm-bE0"/>
-                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="leading" secondItem="b7O-sI-tQw" secondAttribute="leading" id="UzJ-EW-VxG"/>
                             <constraint firstItem="lzK-q8-F2C" firstAttribute="height" secondItem="R8g-B1-zoH" secondAttribute="height" multiplier="0.7" id="b8R-lO-dq1"/>
                             <constraint firstItem="lzK-q8-F2C" firstAttribute="leading" secondItem="b7O-sI-tQw" secondAttribute="leading" constant="30" id="fT2-Ec-mm9"/>
                             <constraint firstItem="b7O-sI-tQw" firstAttribute="trailing" secondItem="R8g-B1-zoH" secondAttribute="trailing" id="hlj-93-qOz"/>
-                            <constraint firstItem="Qc6-Ul-HHh" firstAttribute="top" secondItem="R8g-B1-zoH" secondAttribute="bottom" id="jFc-wv-USf"/>
                             <constraint firstItem="lzK-q8-F2C" firstAttribute="top" secondItem="G9K-PE-NNU" secondAttribute="bottom" constant="8" id="lzH-Ln-hA1"/>
-                            <constraint firstItem="b7O-sI-tQw" firstAttribute="trailing" secondItem="Qc6-Ul-HHh" secondAttribute="trailing" id="mjU-eC-Zgi"/>
                             <constraint firstItem="lzK-q8-F2C" firstAttribute="bottom" secondItem="R8g-B1-zoH" secondAttribute="bottom" multiplier="0.98" id="q8P-UJ-Cfx"/>
                         </constraints>
                     </view>

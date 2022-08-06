@@ -53,17 +53,22 @@ class MovieDetailViewController: UIViewController {
     func registerNib() {
         let nibName = UINib(nibName: CastListTableViewCell.reuseIdenfier, bundle: nil)
         castListTableView.register(nibName, forCellReuseIdentifier: CastListTableViewCell.reuseIdenfier)
+        
+        let nibName2 = UINib(nibName: OverViewTableViewCell.reuseIdenfier, bundle: nil)
+        castListTableView.register(nibName2, forCellReuseIdentifier: OverViewTableViewCell.reuseIdenfier)
     }
     
 }
 
 extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
+            return 1
+        } else if section == 1 {
             return credit.0.count
         } else {
             return credit.1.count
@@ -71,9 +76,18 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CastListTableViewCell.reuseIdenfier) as? CastListTableViewCell else { return UITableViewCell() }
+        guard let overViewCell = tableView.dequeueReusableCell(withIdentifier: OverViewTableViewCell.reuseIdenfier, for: indexPath) as? OverViewTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CastListTableViewCell.reuseIdenfier, for: indexPath) as? CastListTableViewCell else { return UITableViewCell() }
         
         if indexPath.section == 0 {
+            overViewCell.overViewLabel.text = movie.overView
+            overViewCell.overViewLabel.font = .systemFont(ofSize: 14)
+            overViewCell.overViewLabel.textAlignment = .center
+            
+            overViewCell.moreButton.addTarget(self, action: #selector(moreButtonClicked), for: .touchUpInside)
+            
+            return overViewCell
+        } else if indexPath.section == 1{
             let castList = credit.0
             
             cell.profileImageView.kf.setImage(with: castList[indexPath.row].width500ProfileURL)
@@ -108,13 +122,21 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
+            return "OverView"
+        } else if section == 1{
             return "Cast"
         } else {
             return "Crew"
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+extension MovieDetailViewController: OverViewCellDelegate {
+    @objc func moreButtonClicked() {
+        castListTableView.reloadData()
     }
 }
