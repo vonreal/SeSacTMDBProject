@@ -3,5 +3,5 @@
 
 
 # 구현 결과
-## 0805 기준
-            ![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/50474006/182983564-0584a8ba-c57b-45ea-a205-525b11300b02.gif)
+## 0806 기준 (+ 이미지 없을때 처리)
+![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/50474006/183248785-2703f615-d6bc-4cc4-8607-801c08bfe0dc.gif)
