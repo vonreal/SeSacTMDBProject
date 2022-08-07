@@ -4,4 +4,9 @@
 
 # 구현 결과
 ## 0807
-![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/50474006/183263243-249fd003-19df-427f-abb7-909ba9b01aca.gif)
+트렌딩 화면에 대한 페이지 네이션 적용, 그림자 크기 조정
+![ezgif com-gif-maker (12)](https://user-images.githubusercontent.com/50474006/183284101-4802a369-ec01-4505-9f17-2b91ce89ccd2.gif)
+
+## 0806
+화면전환 적용 및 캐스트 정보 출력
+![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/50474006/183284116-4e9305f1-b887-437f-a775-9aaeb3d3752b.gif)
