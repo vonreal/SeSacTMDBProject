@@ -17,7 +17,9 @@ class TrendMovieListViewController: UIViewController {
     @IBOutlet weak var trendListCollectionView: UICollectionView!
     var weekTrendMovieList: [Movie] = []
     var credits: [Int: ([Actor], [Crew])] = [:]
-    var button =  UIButton()
+    var startPage = 1
+    let totalPage = 1000
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,7 @@ class TrendMovieListViewController: UIViewController {
     }
     func requestTrendMovieListFromTMDB() {
         
-        let url = EndPoint.tmdbURL + APIKey.tmdbKey
+        let url = EndPoint.tmdbURL + APIKey.tmdbKey + "&page=\(startPage)"
         
         AF.request(url, method: .get)
             .validate()
@@ -60,12 +62,11 @@ class TrendMovieListViewController: UIViewController {
                 case .success(let value):
                     let jsonArray = JSON(value)["results"].arrayValue
                     
-                    var index = 0
                     for json in jsonArray {
                         var movie = Movie()
                         movie.title = json["title"].stringValue
                         movie.movieID = json["id"].intValue
-                        TrendMovieListAPIManager.shared.requestCredits(movieInfo: movie, index: index) { actors, crews, index in
+                        TrendMovieListAPIManager.shared.requestCredits(movieInfo: movie, index: self.index) { actors, crews, index in
                             self.credits[index] = (actors, crews)
                             DispatchQueue.main.sync {
                                 self.trendListCollectionView.reloadData()
@@ -78,7 +79,7 @@ class TrendMovieListViewController: UIViewController {
                         movie.voteAverage = json["vote_average"].doubleValue
                         movie.releaseDate = json["release_date"].stringValue
                         self.weekTrendMovieList.append(movie)
-                        index += 1
+                        self.index += 1
                     }
                     DispatchQueue.main.sync {
                         self.trendListCollectionView.reloadData()
@@ -168,7 +169,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         cell.trendMovieVIew.layer.borderColor = UIColor.lightGray.cgColor
         cell.trendMovieVIew.layer.shadowColor = UIColor.black.cgColor
         cell.trendMovieVIew.layer.shadowOpacity = 0.25
-        cell.trendMovieVIew.layer.shadowRadius = 10
+        cell.trendMovieVIew.layer.shadowRadius = 5
         
         cell.trendMovieVIew.layer.cornerRadius = 10
         cell.trendMovieVIew.layer.masksToBounds = false
@@ -194,6 +195,7 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
         guard let vc = sb.instantiateViewController(withIdentifier: MovieDetailViewController.reuseIdenfier) as? MovieDetailViewController else { return }
         
         vc.movie = weekTrendMovieList[indexPath.item]
+        print(indexPath.item, credits.count)
         if let credit = credits[indexPath.item] {
             vc.credit = credit
         }
@@ -205,7 +207,8 @@ extension TrendMovieListViewController: UICollectionViewDelegate, UICollectionVi
 extension TrendMovieListViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {
-            if indexPath.item == weekTrendMovieList.count - 1 {
+            if indexPath.item == weekTrendMovieList.count - 1, startPage <= totalPage {
+                startPage += 1
                 requestTrendMovieListFromTMDB()
             }
         }
