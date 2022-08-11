@@ -45,7 +45,7 @@ class TrendMovieListAPIManager {
     }
     
     typealias setCredits = ([Actor], [Crew], Int) -> ()
-    
+
     func requestCredits(movieInfo: Movie, index: Int, setCredits: @escaping setCredits) {
         var actors: [Actor] = []
         var crews: [Crew] = []
