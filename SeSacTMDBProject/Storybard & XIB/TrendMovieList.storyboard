@@ -115,6 +115,9 @@
                             <constraint firstItem="VZK-Au-wHt" firstAttribute="leading" secondItem="XEj-Pr-2iM" secondAttribute="leading" id="x4h-hv-ftU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="VZK-Au-wHt" id="t5S-dg-DSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnG-FL-t1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

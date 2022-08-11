@@ -18,6 +18,7 @@
 		7623E13028A4F732007162E7 /* CinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E12F28A4F732007162E7 /* CinemaViewController.swift */; };
 		7623E13228A4FA5C007162E7 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13128A4FA5C007162E7 /* CategoryTableViewController.swift */; };
 		7623E13428A4FA77007162E7 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13328A4FA77007162E7 /* CategoryTableViewCell.swift */; };
+		7623E13628A50DFE007162E7 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13528A50DFE007162E7 /* Theater.swift */; };
 		763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB53F289A76CD00C0B9CE /* Alamofire */; };
 		763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB542289A76D800C0B9CE /* SwiftyJSON */; };
 		7658CC00289EAAA7003FC07D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658CBFF289EAAA7003FC07D /* Crew.swift */; };
@@ -51,6 +52,7 @@
 		7623E12F28A4F732007162E7 /* CinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewController.swift; sourceTree = "<group>"; };
 		7623E13128A4FA5C007162E7 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7623E13328A4FA77007162E7 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		7623E13528A50DFE007162E7 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		7658CBFF289EAAA7003FC07D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7658CC03289EB33B003FC07D /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				76916D74289BB43600873B32 /* Actor.swift */,
 				7658CBFF289EAAA7003FC07D /* Crew.swift */,
 				76916D72289B9A1E00873B32 /* Movie.swift */,
+				7623E13528A50DFE007162E7 /* Theater.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7623E13628A50DFE007162E7 /* Theater.swift in Sources */,
 				7623E13228A4FA5C007162E7 /* CategoryTableViewController.swift in Sources */,
 				7658CC05289EB33B003FC07D /* OverViewTableViewCell.swift in Sources */,
 				7623E13028A4F732007162E7 /* CinemaViewController.swift in Sources */,
