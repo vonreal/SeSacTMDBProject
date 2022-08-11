@@ -11,7 +11,7 @@
 
 
 ## 0807
-트렌딩 화면에 대한 페이지 네이션 적용, 그림자 크기 조정
+트렌딩 화면에 대한 페이지 네이션 적용, 그림자 크기 조정 <br>
 ![ezgif com-gif-maker (12)](https://user-images.githubusercontent.com/50474006/183284101-4802a369-ec01-4505-9f17-2b91ce89ccd2.gif)
 
 ### 소감
