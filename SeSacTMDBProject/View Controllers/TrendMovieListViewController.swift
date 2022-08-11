@@ -39,7 +39,12 @@ class TrendMovieListViewController: UIViewController {
 
     }
     
-    @objc func listButtonClicked() { }
+    @objc func listButtonClicked() {
+        let sb = UIStoryboard(name: "TrendMovieList", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: CategoryTableViewController.reuseIdenfier) as? CategoryTableViewController else { return }
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @objc func searchButtonClicked() { }
     
     func collectionViewSetDelegate() {
