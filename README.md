@@ -3,8 +3,15 @@
 
 
 # 구현 결과
+## 0811
+우선, 필수 요구사항만 구현, 외부 API 사용 및 개선 필요 + 카테고리 창 왼쪽 반만 뜨게 조절 필요 <br>
+<img width="569" alt="스크린샷 2022-08-11 오후 7 37 08" src="https://user-images.githubusercontent.com/50474006/184115797-6ee1cc15-2a61-417c-a2f6-dcf5614bd20c.png"> <br>
+![ezgif com-gif-maker (19)](https://user-images.githubusercontent.com/50474006/184116038-71d9abe0-bb3d-4310-90d3-aec81ca65ab6.gif)
+
+
+
 ## 0807
-트렌딩 화면에 대한 페이지 네이션 적용, 그림자 크기 조정
+트렌딩 화면에 대한 페이지 네이션 적용, 그림자 크기 조정 <br>
 ![ezgif com-gif-maker (12)](https://user-images.githubusercontent.com/50474006/183284101-4802a369-ec01-4505-9f17-2b91ce89ccd2.gif)
 
 ### 소감
