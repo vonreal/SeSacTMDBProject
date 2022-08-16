@@ -128,7 +128,7 @@
             <objects>
                 <viewController id="sxV-ze-w7P" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxF-a3-C79">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="g0E-R7-Zps"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,9 +161,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             <connections>
-                                                <segue destination="sxV-ze-w7P" kind="popover" popoverAnchorView="Pex-me-sjQ" id="Q84-Sy-beR">
-                                                    <popoverArrowDirection key="popoverArrowDirection" left="YES"/>
-                                                </segue>
+                                                <segue destination="sxV-ze-w7P" kind="push" id="Q84-Sy-beR"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -256,40 +254,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sw-yD-Zub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1425" y="138"/>
-        </scene>
-        <!--Preview Video View Controller-->
-        <scene sceneID="DZy-be-pFx">
-            <objects>
-                <viewController storyboardIdentifier="PreviewVideoViewController" id="EIX-jp-eCQ" customClass="PreviewVideoViewController" customModule="SeSacTMDBProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BiD-1m-OIa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRb-Ry-OYp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="OId-VK-wOi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="cRb-Ry-OYp" firstAttribute="top" secondItem="OId-VK-wOi" secondAttribute="top" id="0Be-gu-oL0"/>
-                            <constraint firstItem="cRb-Ry-OYp" firstAttribute="leading" secondItem="OId-VK-wOi" secondAttribute="leading" id="Gk0-OQ-qyF"/>
-                            <constraint firstItem="OId-VK-wOi" firstAttribute="bottom" secondItem="cRb-Ry-OYp" secondAttribute="bottom" id="H5A-vf-JUd"/>
-                            <constraint firstItem="OId-VK-wOi" firstAttribute="trailing" secondItem="cRb-Ry-OYp" secondAttribute="trailing" id="fog-ZA-d84"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="cRb-Ry-OYp" id="cyL-qW-4Es"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSx-Yz-flP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2157" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lLN-7O-G5L">

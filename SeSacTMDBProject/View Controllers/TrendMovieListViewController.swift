@@ -7,6 +7,8 @@
 
 import UIKit
 
+import TMDBFramework
+
 import Alamofire
 import Kingfisher
 import SwiftyJSON
@@ -222,11 +224,11 @@ extension TrendMovieListViewController: UICollectionViewDataSourcePrefetching {
 
 extension TrendMovieListViewController: TrendMovieListCellDelegate {
     @objc func linkButtonClicked(buttonTag: Int) {
-        let sb = UIStoryboard(name: "TrendMovieList", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: PreviewVideoViewController.reuseIdenfier) as? PreviewVideoViewController else { return }
-
-        vc.movie = weekTrendMovieList[buttonTag]
-        
-        self.present(vc, animated: true)
+        TrendMovieListAPIManager.shared.requestPreviewVideo(movieID: weekTrendMovieList[buttonTag].movieID) { key in
+            let youtubeURL = EndPoint.youtubeURL + key
+            DispatchQueue.main.async {
+                TMDBFramework.OpenWebView.presentWebViewController(viewController: self, url: youtubeURL)
+            }
+        }
     }
 }
