@@ -19,6 +19,10 @@
 		7623E13228A4FA5C007162E7 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13128A4FA5C007162E7 /* CategoryTableViewController.swift */; };
 		7623E13428A4FA77007162E7 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13328A4FA77007162E7 /* CategoryTableViewCell.swift */; };
 		7623E13628A50DFE007162E7 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7623E13528A50DFE007162E7 /* Theater.swift */; };
+		762674AF28AE3BA300579221 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762674AE28AE3BA300579221 /* PageViewController.swift */; };
+		762674B428AE3CAA00579221 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762674B328AE3CAA00579221 /* FirstViewController.swift */; };
+		762674B628AE3CB400579221 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762674B528AE3CB400579221 /* SecondViewController.swift */; };
+		762674B828AE3CBF00579221 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762674B728AE3CBF00579221 /* ThirdViewController.swift */; };
 		763AB540289A76CD00C0B9CE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB53F289A76CD00C0B9CE /* Alamofire */; };
 		763AB543289A76D800C0B9CE /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 763AB542289A76D800C0B9CE /* SwiftyJSON */; };
 		7658CC00289EAAA7003FC07D /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7658CBFF289EAAA7003FC07D /* Crew.swift */; };
@@ -36,6 +40,7 @@
 		76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1C58F289AF9A400604C79 /* EndPoint.swift */; };
 		76F77D4128AB9FCA004FE79D /* TMDBFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F77D3128AB9C71004FE79D /* TMDBFramework.framework */; };
 		76F77D4228AB9FCA004FE79D /* TMDBFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76F77D3128AB9C71004FE79D /* TMDBFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76F77D4528ABA53E004FE79D /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F77D4428ABA53E004FE79D /* Intro.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,10 @@
 		7623E13128A4FA5C007162E7 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		7623E13328A4FA77007162E7 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		7623E13528A50DFE007162E7 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		762674AE28AE3BA300579221 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		762674B328AE3CAA00579221 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		762674B528AE3CB400579221 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		762674B728AE3CBF00579221 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7658CBFF289EAAA7003FC07D /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
 		7658CC03289EB33B003FC07D /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -97,6 +106,7 @@
 		76916D88289C398C00873B32 /* CastListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastListTableViewCell.xib; sourceTree = "<group>"; };
 		76C1C58F289AF9A400604C79 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		76F77D2B28AB9C71004FE79D /* TMDBFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TMDBFramework.xcodeproj; path = ../../iOS/UIkit/TMDBFramework/TMDBFramework.xcodeproj; sourceTree = "<group>"; };
+		76F77D4428ABA53E004FE79D /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +196,10 @@
 				76916D85289C326200873B32 /* MovieDetailViewController.swift */,
 				761C70392899F6D300652036 /* TrendMovieListViewController.swift */,
 				7623E12F28A4F732007162E7 /* CinemaViewController.swift */,
+				762674AE28AE3BA300579221 /* PageViewController.swift */,
+				762674B328AE3CAA00579221 /* FirstViewController.swift */,
+				762674B528AE3CB400579221 /* SecondViewController.swift */,
+				762674B728AE3CBF00579221 /* ThirdViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -197,6 +211,7 @@
 				7658CC04289EB33B003FC07D /* OverViewTableViewCell.xib */,
 				76916D78289BC96200873B32 /* TrendMovieList.storyboard */,
 				76916D7C289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib */,
+				76F77D4428ABA53E004FE79D /* Intro.storyboard */,
 			);
 			path = "Storybard & XIB";
 			sourceTree = "<group>";
@@ -323,6 +338,7 @@
 				7658CC06289EB33B003FC07D /* OverViewTableViewCell.xib in Resources */,
 				761C704A2899F7C900652036 /* .gitignore in Resources */,
 				76916D79289BC96200873B32 /* TrendMovieList.storyboard in Resources */,
+				76F77D4528ABA53E004FE79D /* Intro.storyboard in Resources */,
 				761C70422899F6D400652036 /* LaunchScreen.storyboard in Resources */,
 				76916D7E289BC9DF00873B32 /* TrendMovieListCollectionViewCell.xib in Resources */,
 				76916D8A289C398C00873B32 /* CastListTableViewCell.xib in Resources */,
@@ -345,13 +361,17 @@
 				7658CC00289EAAA7003FC07D /* Crew.swift in Sources */,
 				76916D7D289BC9DF00873B32 /* TrendMovieListCollectionViewCell.swift in Sources */,
 				76C1C590289AF9A400604C79 /* EndPoint.swift in Sources */,
+				762674B628AE3CB400579221 /* SecondViewController.swift in Sources */,
 				761C703A2899F6D300652036 /* TrendMovieListViewController.swift in Sources */,
+				762674B828AE3CBF00579221 /* ThirdViewController.swift in Sources */,
 				76916D89289C398C00873B32 /* CastListTableViewCell.swift in Sources */,
 				761C70362899F6D300652036 /* AppDelegate.swift in Sources */,
+				762674B428AE3CAA00579221 /* FirstViewController.swift in Sources */,
 				760D94A2289CBA4F0010F710 /* TrendMovieListAPIManager.swift in Sources */,
 				76916D86289C326200873B32 /* MovieDetailViewController.swift in Sources */,
 				761C704C2899F8B300652036 /* APIKey.swift in Sources */,
 				761C70382899F6D300652036 /* SceneDelegate.swift in Sources */,
+				762674AF28AE3BA300579221 /* PageViewController.swift in Sources */,
 				76916D75289BB43600873B32 /* Actor.swift in Sources */,
 				7623E13428A4FA77007162E7 /* CategoryTableViewCell.swift in Sources */,
 			);
@@ -496,9 +516,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSacTMDBProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TMDB;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치 기반으로 주변의 영화관 정보를 알려주기 위해서 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TrendMovieList;
+				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -527,9 +548,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SeSacTMDBProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TMDB;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치 기반으로 주변의 영화관 정보를 알려주기 위해서 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TrendMovieList;
+				INFOPLIST_KEY_UIMainStoryboardFile = Intro;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
